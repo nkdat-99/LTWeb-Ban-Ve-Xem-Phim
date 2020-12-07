@@ -1,0 +1,202 @@
+.title-cinema {
+    padding: 20px 0 15px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.address-cinema {
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.total-room, .body-main .total-seat {
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+.list-info-cinema {
+    display: flex;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.select-info {
+    /* padding: 20px 30px; */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid #c0c0c0;
+    border-left: none;
+    cursor: pointer;
+    height: 50px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-info:first-child {
+    border-left: 1px solid #c0c0c0;
+}
+
+.select-info:hover {
+    background: #cdc197;
+    border: 1px solid #cdc197;
+}
+
+.select-active {
+    background: #cdc197;
+    border: 1px solid #cdc197;
+}
+
+.month {
+    display: flex;
+    margin: 10px 0;
+}
+
+.title-month {
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 10%;
+}
+
+.text-month {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 26px 0 0 20px;
+    color: #666666;
+}
+
+.calendar {
+    display: flex;
+}
+
+.calendar input {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.calendar input:checked + .month-picker .value-day {
+    background: url("/img/bg_cal_check.png") no-repeat center center;
+    color: #ffffff;
+}
+
+.calendar .month-picker {
+    margin: 0 45px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.name-day {
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+
+.value-day {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 30px;
+}
+
+.infor-film {
+    margin-top: 20px;
+}
+
+.list-film {
+    background-color: #fff;
+    padding: 20px 20px 5px;
+}
+
+.title-film {
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #231f20;
+    display: flex;
+    align-items: center;
+}
+
+.icon-film {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    background: url("/img/bg_grade_18.png") no-repeat center center;
+}
+
+.film-2 .icon-film {
+    background: url("/img/bg_grade_16.png") no-repeat center center;
+}
+
+.film-3 .icon-film {
+    background: url("/img/bg_grade_all2.png") no-repeat center center;
+}
+
+.type-film {
+    display: flex;
+    color: #666;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.line-type {
+    width: 1px;
+    height: 10px;
+    background-color: rgb(177, 177, 177);
+    margin: 0 8px;
+}
+
+.list-schedule-film {
+    margin: 5px 0 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.list-info {
+    color: #666;
+    text-decoration: none;
+}
+
+.list-info:hover {
+    background-color: #000000;
+    color: rgb(209, 209, 209);
+}
+
+.list-select-film {
+    border: 1px solid #e5e5e5;
+    border-bottom: 0;
+    border-right: 0;
+    text-align: center;
+}
+
+.list-info:last-child {
+    border-right: 1px solid #e5e5e5;
+}
+
+.list-select-film:last-child {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.info-room, .info-seat {
+    padding: 5px 10px;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+}
+
+.info-time {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.warning {
+    padding: 20px 0px;
+    font-size: 12px;
+}

@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#login {
+    width: 100%;
+    height: 30px;
+    background: #efebdb;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right, .left {
+    display: flex;
+    align-items: center;
+}
+
+.list-link {
+    display: flex;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.list-link .icon-facebook {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    background-image: url("/img/icon_fb_top.png");
+    margin-right: 5px;
+}
+
+.list-link .icon-cinema {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    background-image: url("/img/icon_lottecinemaapp.png");
+    margin-right: 5px;
+}
+
+.sign {
+    display: flex;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.sign a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sign a:hover, .sign a:focus {
+    color: rgb(197, 0, 0);
+}
+
+#header {
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-img {
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid #efebdb;
+}
+
+.header-img .img {
+    width: 640px;
+    height: 80px;
+    display: flex;
+    background-image: url("/img/img-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #efebdb;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+    .menu a:hover, .menu a:focus {
+        text-decoration: none;
+    }
+
+.list-menu {
+    padding: 26px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.list-menu:hover, .list-menu:focus {
+    background-color: #efebdb;
+}
+
+.line {
+    width: 1px;
+    height: 40px;
+    background-color: #efebdb;
+}
+
+#main {
+    background: #f9f6ec;
+}
+
+.body-main {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+#footer {
+    max-width: 980px;
+    margin: auto;
+}
+
+#footer .info {
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.img-footer .img-footer-2 {
+    max-width: 980px;
+    height: 373px;
+    display: flex;
+    background-image: url("/img/footer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-footer .img-footer-3 {
+    margin: 20px 0;
+    width: 203px;
+    height: 36px;
+    display: flex;
+    background-image: url("/img/logo_footer.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

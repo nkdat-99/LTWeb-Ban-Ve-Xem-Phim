@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/buy-ticket.css">
+    <link rel="stylesheet" href="../css/select-seat.css">
+    <link rel="stylesheet" href="../css/manage.css">
+</head>
+
+<body>
+    <div id="login">
+        <div class="right">
+            <div class="list-link">
+                <i class="icon-facebook"></i>
+                <p>Lotte Cinema Facebook</p>
+            </div>
+            <div class="list-link">
+                <i class="icon-cinema"></i>
+                <p>Lotte Cinema Facebook</p>
+            </div>
+        </div>
+        <div class="left">
+            <div class="sign signin">
+                <i class="icon-signin"></i>
+                <a href="login.html">Đăng Nhập</a>
+            </div>
+            <div class="sign signup">
+                <i class="icon-signup"></i>
+                <a>Đăng Kí</a>
+            </div>
+        </div>
+    </div>
+    <div id="header">
+        <div class="header-img">
+            <i class="img"></i>
+        </div>
+        <div class="menu">
+            <a href="../index.html" class="list-menu index">TRANG CHỦ</a>
+            <div class="line"></div>
+            <a href="buy-ticket.html" class="list-menu buy-ticket">MUA VÉ</a>
+            <div class="line"></div>
+            <a href="manage.html" class="list-menu manage">QUẢN LÍ</a>
+            <div class="line"></div>
+            <a href="" class="list-menu info">THÔNG TIN LIÊN HỆ</a>
+        </div>
+        <img src="../img/img-menu.jpg" width="1920" height="420">
+    </div>
+    <div id="main">
+        <div class="body-main">
+            <div class="title-select">
+                <div class="title-select-text">Chọn ghế</div>
+            </div>
+        </div>
+        <div class="full-screen">
+            <div class="screen">
+                <div class="title-screen">Màn hình</div>
+                <div class="list-seat">
+                    <table Cellspacing="10">
+                        <tr class="seat-normal">
+                            <td>A</td>
+                            <td id="seat-a1">1</td>
+                            <td id="seat-a2">2</td>
+                            <td id="seat-a3">3</td>
+                            <td id="seat-a4">4</td>
+                            <td id="seat-a5">5</td>
+                            <td id="seat-a6">6</td>
+                            <td id="seat-a7">7</td>
+                            <td id="seat-a8">8</td>
+                        </tr>
+                        <tr class="seat-vip">
+                            <td>B</td>
+                            <td id="seat-b1">1</td>
+                            <td id="seat-b2">2</td>
+                            <td id="seat-b3">3</td>
+                            <td id="seat-b4">4</td>
+                            <td id="seat-b5">5</td>
+                            <td id="seat-b6">6</td>
+                            <td id="seat-b7">7</td>
+                            <td id="seat-b8">8</td>
+                        </tr>
+                        <tr class="seat-vip">
+                            <td>C</td>
+                            <td id="seat-c1">1</td>
+                            <td id="seat-c2">2</td>
+                            <td id="seat-c3">3</td>
+                            <td id="seat-c4">4</td>
+                            <td id="seat-c5">5</td>
+                            <td id="seat-c6">6</td>
+                            <td id="seat-c7">7</td>
+                            <td id="seat-c8">8</td>
+                        </tr>
+                        <tr class="seat-normal">
+                            <td>D</td>
+                            <td id="seat-d1">1</td>
+                            <td id="seat-d2">2</td>
+                            <td id="seat-d3">3</td>
+                            <td id="seat-d4">4</td>
+                            <td id="seat-d5">5</td>
+                            <td id="seat-d6">6</td>
+                            <td id="seat-d7">7</td>
+                            <td id="seat-d8">8</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="decs-seat">
+                    <div class="list-decs-seat">
+                        <i class="icon-decs icon-decs-seat-normal"></i>
+                        Ghế thường
+                    </div>
+                    <div class="list-decs-seat">
+                        <i class="icon-decs icon-decs-seat-vip"></i>
+                        Ghế VIP
+                    </div>
+                    <div class="list-decs-seat">
+                        <i class="icon-decs icon-decs-seat-selectd"></i>
+                        Ghế đã chọn
+                    </div>
+                    <div class="list-decs-seat">
+                        <i class="icon-decs icon-decs-seat-no-select"></i>
+                        Ghế không thể chọn (Đã có người mua)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="full-btn-pay">
+            <div class="full-btn">
+                <div class="btn-pay">
+                    <i class="icon-btn-return"></i>
+                    <button><a href="/html/buy-ticket.html">Quay lại</a></button>
+                </div>
+                <div class="btn-pay">
+                    <button><a href="/html/payment.html">Thanh toán</a></button>
+                    <i class="icon-btn-pay"></i>
+                </div>
+            </div>
+        </div>
+        <div class="full-pay">
+            <div class="info-pay">
+                <div class="list-pay total">
+                    <div class="title-pay">Số Lượng Vé</div>
+                    <div class="title-ticket">Vé Thường: <span class="total-ticket-normal">0</span></div>
+                    <div class="title-ticket">Số VIP: <span class="total-ticket-vip">0</span></div>
+                </div>
+                <div class="line-pay"></div>
+                <div class="list-pay sale">
+                    <div class="title-pay">Khuyến Mãi</div>
+                    <div>
+                        <span>Nhập mã giảm giá:</span>
+                        <input placeholder="Mã code"/>
+                    </div>
+                </div>
+                <div class="line-pay"></div>
+                <div class="list-pay pay-cart">
+                    <div class="title-pay">Thanh Toán</div>
+                    <div class="total-money">
+                        Tổng tiền: 
+                        <span><span class="total-ticket">0</span> đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="img-footer">
+            <i class="img-footer-2"></i>
+            <i class="img-footer-3"></i>
+        </div>
+        <div class="info">
+            CÔNG TY TNHH LOTTE CINEMA VIỆT NAM
+            <br>
+            Giấy CNĐKDN: 0302575928, đăng ký lần đầu ngày 02/05/2008, đăng ký thay đổi lần thứ 10 ngày 30/03/2018, cấp
+            bởi Sở KHĐT Thành phố Hồ Chí Minh
+            <br>
+            Địa chỉ: Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, Phường Tân Hưng, Quận 7, TPHCM, Việt Nam
+            <br>
+            Hotline: (028) 3775 2524
+            <br>
+            COPYRIGHT © LOTTECINEMAVN.COM - ALL RIGHTS RESERVED.
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="base.js"></script>
+
+</html>

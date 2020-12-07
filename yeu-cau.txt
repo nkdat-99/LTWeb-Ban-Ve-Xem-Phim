@@ -1,0 +1,10 @@
+Tĩnh: 3.5
+Động: <= 6.5 MVC
+Đẹp: 0.5
+=> Phần sau đc dùng thư viện
+- ATTT: 1đ :
+ + https
+ + check input
+ + mật khẩu (hash)
+- Season, cookies : 1đ
+- API: 1đ.
