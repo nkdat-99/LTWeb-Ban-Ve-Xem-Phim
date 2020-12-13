@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/buy-ticket.css">
     <link rel="stylesheet" href="../css/select-seat.css">
 </head>
+
 <body>
     <div id="login">
         <div class="right">
@@ -46,8 +48,45 @@
         </div>
     </div>
     <div id="main">
-        <div class="body-main">
-            Thanh toán
+        <div class="full-pay">
+            <div class="info-pay">
+                <div class="list-pay total">
+                    <div class="title-pay">Số Lượng Vé</div>
+                    <div class="title-ticket">Vé Thường: <span class="total-ticket-normal">1</span></div>
+                    <div class="title-ticket">Số VIP: <span class="total-ticket-vip">0</span></div>
+                </div>
+                <div class="line-pay"></div>
+                <div class="list-pay sale">
+                    <div class="title-pay">Khuyến Mãi</div>
+                    <div>
+                        <span>Nhập mã giảm giá:</span>
+                        <input placeholder="Mã code" />
+                    </div>
+                </div>
+                <div class="line-pay"></div>
+                <div class="list-pay pay-cart">
+                    <div class="title-pay">Thanh Toán</div>
+                    <div class="total-money">
+                        Tổng tiền:
+                        <span><span class="total-ticket" id="totalTicket">180000</span> đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-main card-bank">
+            <select class="select-bank" id="payWay">
+                <option value="Vietcombank">Vietcombank</option>
+                <option value="BIDV">BIDV</option>
+                <option value="Agribank">Agribank</option>
+                <option value="VietinBank">VietinBank</option>
+                <option value="Techcombank">Techcombank</option>
+                <option value="VPBank">VPBank</option>
+                <option value="Sacombank">Sacombank</option>
+                <option value="Eximbank">Eximbank</option>
+            </select>
+            <div class="btn-pay pay-card">
+                <button id="btnPayment">Thanh toán</button>
+            </div>
         </div>
     </div>
     <div id="footer">
@@ -57,16 +96,16 @@
         </div>
         <div class="info">
             CÔNG TY TNHH LOTTE CINEMA VIỆT NAM
-            <br>
-            Giấy CNĐKDN: 0302575928, đăng ký lần đầu ngày 02/05/2008, đăng ký thay đổi lần thứ 10 ngày 30/03/2018, cấp bởi Sở KHĐT Thành phố Hồ Chí Minh
-            <br>
-            Địa chỉ: Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, Phường Tân Hưng, Quận 7, TPHCM, Việt Nam
-            <br>
-            Hotline: (028) 3775 2524
-            <br>
-            COPYRIGHT © LOTTECINEMAVN.COM - ALL RIGHTS RESERVED.
+            <br> Giấy CNĐKDN: 0302575928, đăng ký lần đầu ngày 02/05/2008, đăng ký thay đổi lần thứ 10 ngày 30/03/2018, cấp bởi Sở KHĐT Thành phố Hồ Chí Minh
+            <br> Địa chỉ: Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, Phường Tân Hưng, Quận 7, TPHCM, Việt Nam
+            <br> Hotline: (028) 3775 2524
+            <br> COPYRIGHT © LOTTECINEMAVN.COM - ALL RIGHTS RESERVED.
         </div>
     </div>
 </body>
-<script type="text/javascript" src="base.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/payment.js"></script>
+
 </html>

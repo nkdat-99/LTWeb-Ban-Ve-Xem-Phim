@@ -10,7 +10,8 @@
     color: #666;
 }
 
-.total-room, .body-main .total-seat {
+.total-room,
+.body-main .total-seat {
     padding-bottom: 10px;
     font-size: 14px;
     color: #666;
@@ -81,7 +82,7 @@
     clip: rect(1px, 1px, 1px, 1px);
 }
 
-.calendar input:checked + .month-picker .value-day {
+.calendar input:checked+.month-picker .value-day {
     background: url("/img/bg_cal_check.png") no-repeat center center;
     color: #ffffff;
 }
@@ -162,6 +163,7 @@
 .list-info {
     color: #666;
     text-decoration: none;
+    width: 135px;
 }
 
 .list-info:hover {
@@ -184,7 +186,8 @@
     border-bottom: 1px solid #e5e5e5;
 }
 
-.info-room, .info-seat {
+.info-room,
+.info-seat {
     padding: 5px 10px;
     font-size: 12px;
     letter-spacing: 0.6px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="/css/select-seat.css">
     <link rel="stylesheet" href="/css/manage.css">
 </head>
+
 <body>
     <div id="login">
         <div class="right">
@@ -50,17 +52,14 @@
     <div id="main">
         <div class="body-main">
             <div class="infor-cinema">
-                <div class="title-cinema">
-                    Rạp Lotte Cinema Hồ Gươm Plaza
-                </div>
-                <div class="address-cinema">
-                    Tầng 7, Cantavil Premier, Số 1 đường Song Hành, Xa lộ Hà Nội, P.An Phú, Q.2, TP.HCM, Việt Nam
-                </div>
+                <div class="title-cinema" id="titleCinema"></div>
+                <div class="address-cinema" id="addressCinema"></div>
+                <div class="address-cinema" id="hotLine"></div>
                 <div class="total-room">
-                    Tổng số phòng chiếu: <span id="totalRoom">8</span> phòng
+                    Tổng số phòng chiếu: <span id="totalRoom"></span> phòng
                 </div>
                 <div class="total-seat">
-                    Tổng số chỗ ngồi: <span id="totalSeat">1.043</span> ghế
+                    Tổng số chỗ ngồi: <span id="totalSeat"></span> ghế
                 </div>
             </div>
             <div class="list-info-cinema">
@@ -80,139 +79,58 @@
             <div class="time-film">
                 <div class="month">
                     <div class="title-month">
-                        11
+                        12
                     </div>
                     <div class="text-month">
-                        2020 November
+                        2020 December
                     </div>
                 </div>
                 <div class="calendar">
                     <div class="">
                         <i class="icon-prev"></i>
                     </div>
-                    <input type="radio" name="day" value="" id="November16">
+                    <input type="radio" name="day" value="" checked id="November16">
                     <label for="November16" class="month-picker">
                         <div class="name-day">Hai</div>
-                        <div class="value-day">16</div>
+                        <div class="value-day">14</div>
                     </label>
                     <input type="radio" name="day" value="" id="November17">
                     <label for="November17" class="month-picker">
                         <div class="name-day">Ba</div>
-                        <div class="value-day">17</div>
+                        <div class="value-day">15</div>
                     </label>
                     <input type="radio" name="day" value="" id="November18">
                     <label for="November18" class="month-picker">
                         <div class="name-day">Tư</div>
-                        <div class="value-day">18</div>
+                        <div class="value-day">16</div>
                     </label>
                     <input type="radio" name="day" value="" id="November19">
                     <label for="November19" class="month-picker">
                         <div class="name-day">Năm</div>
-                        <div class="value-day">19</div>
+                        <div class="value-day">17</div>
                     </label>
                     <input type="radio" name="day" value="" id="November20">
                     <label for="November20" class="month-picker">
                         <div class="name-day">Sáu</div>
-                        <div class="value-day">20</div>
+                        <div class="value-day">18</div>
                     </label>
                     <input type="radio" name="day" value="" id="November21">
                     <label for="November21" class="month-picker">
                         <div class="name-day">Bảy</div>
-                        <div class="value-day">21</div>
+                        <div class="value-day">19</div>
                     </label>
                     <input type="radio" name="day" value="" id="November22">
                     <label for="November22" class="month-picker">
                         <div class="name-day">CN</div>
-                        <div class="value-day">22</div>
+                        <div class="value-day">20</div>
                     </label>
                 </div>
             </div>
             <div class="infor-film">
                 <div class="type-film-human"></div>
-                <div class="list-film">
-                    <div class="film-1">
-                        <div class="title-film">
-                            <i class="icon-film"></i>
-                            TIỆC TRĂNG MÁU
-                        </div>
-                        <div class="type-film">
-                            <div class="type-film-screen">2D</div>
-                            <div class="line-type"></div>
-                            <div class="type-film-sub">Phụ đề</div>
-                        </div>
-                        <div class="list-schedule-film">
-                            <a href="/html/select-seat.html" class="list-info">
-                                <div class="list-select-film info-room">Phòng 04</div>
-                                <div class="list-select-film info-time">09:00</div>
-                                <div class="list-select-film info-seat">211/211 Ghế ngồi</div>
-                            </a>
-                            <a href="/html/select-seat.html" class="list-info">
-                                <div class="list-select-film info-room">Phòng 06</div>
-                                <div class="list-select-film info-time">10:30</div>
-                                <div class="list-select-film info-seat">211/211 Ghế ngồi</div>
-                            </a>
-                            <a href="/html/select-seat.html" class="list-info">
-                                <div class="list-select-film info-room">Phòng 01</div>
-                                <div class="list-select-film info-time">12:00</div>
-                                <div class="list-select-film info-seat">211/211 Ghế ngồi</div>
-                            </a>
-                            <a href="/html/select-seat.html" class="list-info">
-                                <div class="list-select-film info-room">Phòng 02</div>
-                                <div class="list-select-film info-time">14:00</div>
-                                <div class="list-select-film info-seat">211/211 Ghế ngồi</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="film-2">
-                        <div class="title-film">
-                            <i class="icon-film"></i>
-                            ĐẤU SĨ TỐI THƯỢNG
-                        </div>
-                        <div class="type-film">
-                            <div class="type-film-screen">2D</div>
-                            <div class="line-type"></div>
-                            <div class="type-film-sub">Phụ đề</div>
-                        </div>
-                        <div class="list-schedule-film">
-                            <a href="/html/select-seat.html" class="list-info">
-                                <div class="list-select-film info-room">Phòng 04</div>
-                                <div class="list-select-film info-time">09:00</div>
-                                <div class="list-select-film info-seat">211/211 Ghế ngồi</div>
-                            </a>
-                            <a href="/html/select-seat.html" class="list-info">
-                                <div class="list-select-film info-room">Phòng 06</div>
-                                <div class="list-select-film info-time">10:30</div>
-                                <div class="list-select-film info-seat">211/211 Ghế ngồi</div>
-                            </a>
-                            <a href="/html/select-seat.html" class="list-info">
-                                <div class="list-select-film info-room">Phòng 01</div>
-                                <div class="list-select-film info-time">12:00</div>
-                                <div class="list-select-film info-seat">211/211 Ghế ngồi</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="film-3">
-                        <div class="title-film">
-                            <i class="icon-film"></i>
-                            LIÊN QUÂN SIÊU THÚ
-                        </div>
-                        <div class="type-film">
-                            <div class="type-film-screen">3D</div>
-                            <div class="line-type"></div>
-                            <div class="type-film-sub">Lồng tiếng</div>
-                        </div>
-                        <div class="list-schedule-film">
-                            <a href="/html/select-seat.html" class="list-info">
-                                <div class="list-select-film info-room">Phòng 01</div>
-                                <div class="list-select-film info-time">12:00</div>
-                                <div class="list-select-film info-seat">211/211 Ghế ngồi</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <div class="list-film" id="listFilm"></div>
                 <div class="warning">
-                    *** Lịch chiếu phim có thể thay đổi mà không báo trước.
-                    Thời gian bắt đầu chiếu phim có thể chênh lệch 15 phút do chiếu quảng cáo, giới thiệu phim ra rạp
+                    *** Lịch chiếu phim có thể thay đổi mà không báo trước. Thời gian bắt đầu chiếu phim có thể chênh lệch 15 phút do chiếu quảng cáo, giới thiệu phim ra rạp
                 </div>
             </div>
         </div>
@@ -224,16 +142,16 @@
         </div>
         <div class="info">
             CÔNG TY TNHH LOTTE CINEMA VIỆT NAM
-            <br>
-            Giấy CNĐKDN: 0302575928, đăng ký lần đầu ngày 02/05/2008, đăng ký thay đổi lần thứ 10 ngày 30/03/2018, cấp bởi Sở KHĐT Thành phố Hồ Chí Minh
-            <br>
-            Địa chỉ: Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, Phường Tân Hưng, Quận 7, TPHCM, Việt Nam
-            <br>
-            Hotline: (028) 3775 2524
-            <br>
-            COPYRIGHT © LOTTECINEMAVN.COM - ALL RIGHTS RESERVED.
+            <br> Giấy CNĐKDN: 0302575928, đăng ký lần đầu ngày 02/05/2008, đăng ký thay đổi lần thứ 10 ngày 30/03/2018, cấp bởi Sở KHĐT Thành phố Hồ Chí Minh
+            <br> Địa chỉ: Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, Phường Tân Hưng, Quận 7, TPHCM, Việt Nam
+            <br> Hotline: (028) 3775 2524
+            <br> COPYRIGHT © LOTTECINEMAVN.COM - ALL RIGHTS RESERVED.
         </div>
     </div>
 </body>
-<script type="text/javascript" src="base.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/buy-ticket.js"></script>
+
 </html>

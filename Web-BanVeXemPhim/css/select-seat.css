@@ -35,7 +35,7 @@
     background-color: #f9f6ec;
 }
 
-.list-seat .seat-normal td {
+.list-seat td {
     text-align: center;
     width: 25px;
     height: 25px;
@@ -45,26 +45,10 @@
     cursor: pointer;
 }
 
-.list-seat .seat-vip td {
-    text-align: center;
-    width: 25px;
-    height: 25px;
-    background: #E96106;
-    font-size: 12px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.list-seat .seat-normal td:first-child,
-.list-seat .seat-vip td:first-child {
-    background: #f9f6ec;
-    color: black;
-}
-
 .decs-seat {
     display: flex;
     padding-top: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -83,10 +67,7 @@
 
 .icon-decs-seat-normal {
     background: #848484;
-}
-
-.icon-decs-seat-vip {
-    background: #E96106;
+    background-size: cover;
 }
 
 .icon-decs-seat-no-select {
@@ -102,7 +83,6 @@
 .full-btn-pay {
     background: #CDC197;
     padding: 20px 0;
-    
 }
 
 .full-btn {
@@ -128,9 +108,15 @@
     cursor: pointer;
 }
 
-.btn-pay button:focus, .btn-pay button:hover {
+.btn-pay button:focus,
+.btn-pay button:hover {
     outline: none;
     background: -webkit-linear-gradient(top, #6f624794, #6F6247);
+}
+
+.btn-pay a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .icon-btn-pay {
@@ -211,4 +197,40 @@
 
 .total-ticket {
     font-size: 26px;
+}
+
+.card-bank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select-bank {
+    margin: 20px 0;
+    width: 150px;
+    height: 30px;
+}
+
+.pay-card {
+    margin-bottom: 30px;
+}
+
+.seat-selected {
+    background: url(/img/bg_s_info03.gif) no-repeat 0 0!important;
+    background-size: cover!important;
+    font-size: 0!important;
+}
+
+.seat-no-selected {
+    background: url(/img/bg_s_info04.gif) no-repeat 0 0!important;
+    background-size: cover!important;
+    font-size: 0!important;
+}
+
+.require-seat {
+    display: none;
+    margin: 20px 0;
+    text-align: center;
+    color: red;
+    font-weight: bold;
 }
