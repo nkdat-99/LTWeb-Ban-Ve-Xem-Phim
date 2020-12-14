@@ -12,6 +12,7 @@ class SelectJS {
             this.initEvents();
             this.getBook();
             this.getSeat();
+            this.getAccountId(localStorage.getItem("idaccount"));
             this.book = null;
         } catch (e) {
             console.log(e);
@@ -21,6 +22,42 @@ class SelectJS {
     initEvents() {
         $("#seat").on("click", "td", this.seatSelect);
         $("#btnPay").click(this.btnPay.bind(this));
+        $("#logOut").click(this.btnLogOut.bind(this));
+    }
+
+    getAccountId(x) {
+        if (x != null && x != "null") {
+            self = this;
+            $.ajax({
+                url: "https://localhost:8443/api/account/" + x,
+                method: "GET",
+                contentType: "application/json",
+                dataType: "",
+                async: false
+            }).done(function(response) {
+                console.log(response);
+                $('#nameAccount').text(response.name);
+                $('.sign-in-up').css("display", "none");
+                $('.log-in').css("display", "block");
+                if (response.rule) {
+                    $("#muaVe").hide();
+                } else {
+                    $("#quanLi").hide();
+                }
+            }).fail(function(res) {
+                console.log(res);
+            })
+        } else {
+            $('.sign-in-up').css("display", "block");
+            $('.log-in').css("display", "none");
+            $("#quanLi").hide();
+        }
+    }
+
+    btnLogOut() {
+        localStorage.setItem("idaccount", null);
+        $('.sign-in-up').css("display", "block");
+        $('.log-in').css("display", "none");
     }
 
     getBook() {

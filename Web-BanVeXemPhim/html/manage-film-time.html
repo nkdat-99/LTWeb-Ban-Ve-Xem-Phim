@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/buy-ticket.css">
-    <link rel="stylesheet" href="../css/select-seat.css">
+    <link rel="stylesheet" href="../css/manage.css">
+    <link rel="stylesheet" href="../css/modal.css">
 </head>
 
 <body>
@@ -51,46 +51,28 @@
             <div class="line"></div>
             <a href="" class="list-menu info">THÔNG TIN LIÊN HỆ</a>
         </div>
-        <img src="../img/img-menu.jpg" width="1920" height="420">
     </div>
     <div id="main">
         <div class="body-main">
-            <div class="title-select">
-                <div class="title-select-text">Chọn ghế</div>
+            <div class="title">Quản Lí Phim</div>
+            <div class="manage-film-time">
+                <table id="manageFilmTime">
+                    <thead>
+                        <th>STT</th>
+                        <th>Tên phim</th>
+                        <th>Tên phòng</th>
+                        <th>Giờ chiếu</th>
+                        <th>Ngày chiếu</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
-        </div>
-        <div class="full-screen">
-            <div class="screen">
-                <div class="title-screen">Màn hình</div>
-                <div class="list-seat">
-                    <table id="seat" Cellspacing="10">
-                    </table>
-                </div>
-                <div class="decs-seat">
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-normal"></i> Ghế chưa chọn
-                    </div>
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-selectd"></i> Ghế đã chọn
-                    </div>
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-no-select"></i> Ghế không thể chọn (Đã có người mua)
-                    </div>
-                </div>
+            <div class="btn-edit">
+                <button id="btnAdd">Thêm</button>
+                <button id="btnEdit">Sửa</button>
+                <button id="btnDelete">Xóa</button>
             </div>
-        </div>
-        <div class="require-seat">Bạn cần phải chọn ghế ngồi</div>
-        <div class="full-btn-pay">
-            <div class="full-btn">
-                <div class="btn-pay">
-                    <i class="icon-btn-return"></i>
-                    <button><a href="/html/buy-ticket.html">Quay lại</a></button>
-                </div>
-                <div class="btn-pay">
-                    <button id="btnPay">Thanh toán</button>
-                    <i class="icon-btn-pay"></i>
-                </div>
-            </div>
+            <div class="title-announce" id="#titleAnnounce"></div>
         </div>
     </div>
     <div id="footer">
@@ -106,10 +88,45 @@
             <br> COPYRIGHT © LOTTECINEMAVN.COM - ALL RIGHTS RESERVED.
         </div>
     </div>
+
+    <div class="dialog-modal"></div>
+    <div class="dialog">
+        <div class="dialog-title">
+            <div class="title-text">
+                Quản lí phim
+            </div>
+        </div>
+        <div class="dialog-body">
+            <div class="row">
+                <div class="title-row">Tên phim</div>
+                <select id="txtFilm" class="input-default">
+                </select>
+            </div>
+            <div class="row">
+                <div class="title-row">Tên phòng</div>
+                <select id="txtRoom" class="input-default">
+                </select>
+            </div>
+            <div class="row">
+                <div class="title-row">Giờ chiếu<label style="color: red;">(*)</label></div>
+                <input id="txtTime" required type="text" class="input-default" />
+                <label id="checkTime" style="color: red; margin-left: 10px; display: none;">* Bạn cần phải điền giờ chiếu</label>
+            </div>
+            <div class="row">
+                <div class="title-row">Ngày chiếu<label style="color: red;">(*)</label></div>
+                <input id="txtDate" required type="date" class="input-default" style="text-align: center;" />
+                <label id="checkDate" style="color: red; margin-left: 10px; display: none;">* Bạn cần phải điền ngày chiếu</label>
+            </div>
+            <div class="btn-dialog">
+                <button id="btnCancel">Hủy</button>
+                <button id="btnSave">Lưu</button>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="/js/select-seat.js"></script>
+<script src="/js/manage-film-time.js"></script>
 
 </html>

@@ -1,15 +1,14 @@
 $(document).ready(function() {
     try {
-        okeJS = new OkeJS();
+        manageJS = new ManageJS();
     } catch (e) {
         console.log(e);
     }
 })
 
-class OkeJS {
+class ManageJS {
     constructor() {
         try {
-            $("#code-ticket").text(localStorage.getItem("codeBooking"));
             this.initEvents();
             this.getAccountId(localStorage.getItem("idaccount"));
         } catch (e) {

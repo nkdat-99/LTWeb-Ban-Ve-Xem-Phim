@@ -23,13 +23,18 @@
             </div>
         </div>
         <div class="left">
-            <div class="sign signin">
+            <div class="sign sign-in-up">
                 <i class="icon-signin"></i>
                 <a href="login.html">Đăng Nhập</a>
             </div>
-            <div class="sign signup">
+            <div class="sign sign-in-up">
                 <i class="icon-signup"></i>
-                <a>Đăng Kí</a>
+                <a href="singup.html">Đăng Kí</a>
+            </div>
+            <div class="sign log-in" id="nameAccount"></div>
+            <div class="sign log-in">
+                <i class="icon-signup"></i>
+                <div id="logOut">Đăng xuất</div>
             </div>
         </div>
     </div>
@@ -40,9 +45,9 @@
         <div class="menu">
             <a href="../index.html" class="list-menu index">TRANG CHỦ</a>
             <div class="line"></div>
-            <a href="buy-ticket.html" class="list-menu buy-ticket">MUA VÉ</a>
+            <a href="buy-ticket.html" class="list-menu buy-ticket" id="muaVe">MUA VÉ</a>
             <div class="line"></div>
-            <a href="manage.html" class="list-menu manage">QUẢN LÍ</a>
+            <a href="manage.html" class="list-menu manage" id="quanLi">QUẢN LÍ</a>
             <div class="line"></div>
             <a href="" class="list-menu info">THÔNG TIN LIÊN HỆ</a>
         </div>
@@ -87,6 +92,7 @@
             <div class="btn-pay pay-card">
                 <button id="btnPayment">Thanh toán</button>
             </div>
+            <div class="requi-text" style="color: red; font-size: 16px; font-weight: bold; padding-bottom: 30px;"></div>
         </div>
     </div>
     <div id="footer">

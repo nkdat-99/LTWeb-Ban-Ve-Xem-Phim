@@ -7,8 +7,8 @@
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/buy-ticket.css">
-    <link rel="stylesheet" href="../css/select-seat.css">
-    <link rel="stylesheet" href="../css/manage.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/singup-singin.css">
 </head>
 
 <body>
@@ -24,13 +24,18 @@
             </div>
         </div>
         <div class="left">
-            <div class="sign signin">
+            <div class="sign sign-in-up">
                 <i class="icon-signin"></i>
                 <a href="login.html">Đăng Nhập</a>
             </div>
-            <div class="sign signup">
+            <div class="sign sign-in-up">
                 <i class="icon-signup"></i>
-                <a>Đăng Kí</a>
+                <a href="singup.html">Đăng Kí</a>
+            </div>
+            <div class="sign log-in" id="nameAccount"></div>
+            <div class="sign log-in">
+                <i class="icon-signup"></i>
+                <div id="logOut">Đăng xuất</div>
             </div>
         </div>
     </div>
@@ -41,16 +46,46 @@
         <div class="menu">
             <a href="../index.html" class="list-menu index">TRANG CHỦ</a>
             <div class="line"></div>
-            <a href="buy-ticket.html" class="list-menu buy-ticket">MUA VÉ</a>
+            <a href="buy-ticket.html" class="list-menu buy-ticket" id="muaVe">MUA VÉ</a>
             <div class="line"></div>
-            <a href="manage.html" class="list-menu manage">QUẢN LÍ</a>
+            <a href="manage.html" class="list-menu manage" id="quanLi">QUẢN LÍ</a>
             <div class="line"></div>
             <a href="" class="list-menu info">THÔNG TIN LIÊN HỆ</a>
         </div>
     </div>
     <div id="main">
         <div class="body-main">
-            Đăng nhập
+            <div class="body-main">
+                <div class="dialog-title">
+                    <div class="title-text">
+                        Đăng nhập tài khoản
+                    </div>
+                </div>
+                <div class="title-announce"></div>
+                <a href="buy-ticket.html" class="sing-in" id="singInBuy">
+                    <button>Mua Vé</button>
+                </a>
+                <a href="manage.html" class="sing-in" id="singInManager">
+                    <button>Quản Lí</button>
+                </a>
+                <div class="dialog-body">
+                    <div class="row">
+                        <div class="title-row">Tên tài khoản <label style="color: red;">(*)</label></div>
+                        <input id="txtUser" required type="text" class="input-default" />
+                        <label id="checkUser" style="color: red; margin-left: 10px; display: none;">* Bạn cần phải điền tên tài khoản</label>
+                    </div>
+                    <div class="row">
+                        <div class="title-row">Mật khẩu <label style="color: red;">(*)</label></div>
+                        <input id="txtPass" required type="password" class="input-default" />
+                        <label id="checkPass" style="color: red; margin-left: 10px; display: none;">* Bạn cần phải điền mật khẩu</label>
+                    </div>
+                    <div class="btn-dialog">
+                        <button id="btnCancel">Clear</button>
+                        <button id="btnSave">Đăng nhập</button>
+                    </div>
+                    <div id="loginFalse" style="color: red; font-size: 16px; display: none;">* Sai thông tin đăng nhập</div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="footer">

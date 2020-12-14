@@ -15,6 +15,7 @@ class BaseJS {
             this.getFilm();
             this.getRoom();
             this.getShowtimes();
+            this.getAccountId(localStorage.getItem("idaccount"));
             this.room = null;
             this.book = null;
         } catch (e) {
@@ -24,6 +25,41 @@ class BaseJS {
 
     initEvents() {
         $("#listFilm").on("click", "a", this.btnFilm);
+        $("#logOut").click(this.btnLogOut.bind(this));
+    }
+
+    getAccountId(x) {
+        if (x != null && x != "null") {
+            self = this;
+            $.ajax({
+                url: "https://localhost:8443/api/account/" + x,
+                method: "GET",
+                contentType: "application/json",
+                dataType: "",
+                async: false
+            }).done(function(response) {
+                $('#nameAccount').text(response.name);
+                $('.sign-in-up').css("display", "none");
+                $('.log-in').css("display", "block");
+                if (response.rule) {
+                    $("#muaVe").hide();
+                } else {
+                    $("#quanLi").hide();
+                }
+            }).fail(function(res) {
+                console.log(res);
+            })
+        } else {
+            $('.sign-in-up').css("display", "block");
+            $('.log-in').css("display", "none");
+            $("#quanLi").hide();
+        }
+    }
+
+    btnLogOut() {
+        localStorage.setItem("idaccount", null);
+        $('.sign-in-up').css("display", "block");
+        $('.log-in').css("display", "none");
     }
 
     getCinema() {
@@ -118,7 +154,6 @@ class BaseJS {
                 let idfilm = '#idFilm-' + item.idfilm;
                 let itemRoom = self.room.filter(e => e.id == item.idroom);
                 let itemCL = itemRoom[0].slg - self.book.filter(e => e.idshowtimes == item.id).length;
-                console.log(itemCL);
                 var trHTML = $(`<a class="list-info">
                     <div class="list-select-film info-room">Phòng ` + itemRoom[0].name + `</div>
                     <div class="list-select-film info-time">` + item.giochieu + `</div>

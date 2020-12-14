@@ -7,7 +7,8 @@
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/buy-ticket.css">
-    <link rel="stylesheet" href="../css/select-seat.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/singup-singin.css">
 </head>
 
 <body>
@@ -51,45 +52,44 @@
             <div class="line"></div>
             <a href="" class="list-menu info">THÔNG TIN LIÊN HỆ</a>
         </div>
-        <img src="../img/img-menu.jpg" width="1920" height="420">
     </div>
     <div id="main">
         <div class="body-main">
-            <div class="title-select">
-                <div class="title-select-text">Chọn ghế</div>
-            </div>
-        </div>
-        <div class="full-screen">
-            <div class="screen">
-                <div class="title-screen">Màn hình</div>
-                <div class="list-seat">
-                    <table id="seat" Cellspacing="10">
-                    </table>
-                </div>
-                <div class="decs-seat">
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-normal"></i> Ghế chưa chọn
-                    </div>
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-selectd"></i> Ghế đã chọn
-                    </div>
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-no-select"></i> Ghế không thể chọn (Đã có người mua)
-                    </div>
+            <div class="dialog-title">
+                <div class="title-text">
+                    Đăng kí tài khoản
                 </div>
             </div>
-        </div>
-        <div class="require-seat">Bạn cần phải chọn ghế ngồi</div>
-        <div class="full-btn-pay">
-            <div class="full-btn">
-                <div class="btn-pay">
-                    <i class="icon-btn-return"></i>
-                    <button><a href="/html/buy-ticket.html">Quay lại</a></button>
+            <div class="title-announce"></div>
+            <a href="login.html" class="sing-in" id="singIn">
+                <button>Đăng Nhập</button>
+            </a>
+            <div class="dialog-body">
+                <div class="row">
+                    <div class="title-row">Tên tài khoản <label style="color: red;">(*)</label></div>
+                    <input id="txtUser" required type="text" class="input-default" />
+                    <label id="checkUser" style="color: red; margin-left: 10px; display: none;">* Bạn cần phải điền tên tài khoản</label>
                 </div>
-                <div class="btn-pay">
-                    <button id="btnPay">Thanh toán</button>
-                    <i class="icon-btn-pay"></i>
+                <div class="row">
+                    <div class="title-row">Mật khẩu <label style="color: red;">(*)</label></div>
+                    <input id="txtPass" required type="password" class="input-default" />
+                    <label id="checkPass" style="color: red; margin-left: 10px; display: none;">* Bạn cần phải điền mật khẩu</label>
                 </div>
+                <div class="row">
+                    <div class="title-row">Nhập lại mật khẩu <label style="color: red;">(*)</label></div>
+                    <input id="txtRePass" required type="password" class="input-default" />
+                    <label id="checkRePass" style="color: red; margin-left: 10px; display: none;">* Mật khẩu cần phải giống nhau</label>
+                </div>
+                <div class="row">
+                    <div class="title-row">Tên người dùng <label style="color: red;">(*)</label></div>
+                    <input id="txtName" required type="text" class="input-default" />
+                    <label id="checkName" style="color: red; margin-left: 10px; display: none;">* Bạn cần phải điền tên người dùng</label>
+                </div>
+                <div class="btn-dialog">
+                    <button id="btnCancel">Clear</button>
+                    <button id="btnSave">Lưu</button>
+                </div>
+                <div id="singupFalse" style="color: red; font-size: 16px; display: none;">* Tên UserName đã tồn tại</div>
             </div>
         </div>
     </div>
@@ -110,6 +110,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="/js/select-seat.js"></script>
+<script src="/js/singup.js"></script>
 
 </html>

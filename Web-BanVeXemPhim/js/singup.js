@@ -1,12 +1,12 @@
 $(document).ready(function() {
     try {
-        loginJS = new LoginJS();
+        singUpJS = new SingUpJS();
     } catch (e) {
         console.log(e);
     }
 })
 
-class LoginJS {
+class SingUpJS {
     constructor() {
         try {
             this.initEvents();
@@ -32,17 +32,14 @@ class LoginJS {
                 dataType: "",
                 async: false
             }).done(function(response) {
+                console.log(response);
                 $('#nameAccount').text(response.name);
                 $('.sign-in-up').css("display", "none");
                 $('.log-in').css("display", "block");
                 if (response.rule) {
                     $("#muaVe").hide();
-                    $("#quanLi").show();
-                    $("#singInManager").css("display", "block");
                 } else {
                     $("#quanLi").hide();
-                    $("#muaVe").show();
-                    $("#singInBuy").css("display", "block");
                 }
             }).fail(function(res) {
                 console.log(res);
@@ -70,6 +67,9 @@ class LoginJS {
         let k = true;
         account.username = $('#txtUser').val();
         account.password = $('#txtPass').val();
+        var repassword = $('#txtRePass').val();
+        account.name = $('#txtName').val();
+        account.rule = 0;
         if (account.username == "") {
             k = false;
             $("#checkUser").show();
@@ -80,21 +80,29 @@ class LoginJS {
             $("#checkPass").show();
         } else
             $("#checkPass").hide();
+        if (account.password != repassword) {
+            k = false;
+            $("#checkRePass").show();
+        } else
+            $("#checkRePass").hide();
+        if (account.name == "") {
+            k = false;
+            $("#checkName").show();
+        } else
+            $("#checkName").hide();
         if (k) {
             $.ajax({
-                url: "https://localhost:8443/api/login/",
+                url: "https://localhost:8443/api/register/",
                 method: "POST",
                 data: JSON.stringify(account),
                 contentType: "application/json",
             }).done(function(res) {
                 if (res) {
-                    $(".title-announce").text("Đăng nhập thành công!");
+                    $(".title-announce").text("Đăng kí tài khoản thành công!");
+                    $("#singIn").css("display", "block");
                     $(".dialog-body").hide();
-                    $("#loginFalse").css("display", "none");
-                    localStorage.setItem("idaccount", res);
-                    self.getAccountId(res);
                 } else {
-                    $("#loginFalse").css("display", "block");
+                    $("#singupFalse").css("display", "block");
                 }
             }).fail(function(res) {
                 console.log(res);

@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/buy-ticket.css">
-    <link rel="stylesheet" href="../css/select-seat.css">
+    <link rel="stylesheet" href="../css/manage.css">
 </head>
 
 <body>
@@ -51,45 +50,19 @@
             <div class="line"></div>
             <a href="" class="list-menu info">THÔNG TIN LIÊN HỆ</a>
         </div>
-        <img src="../img/img-menu.jpg" width="1920" height="420">
     </div>
     <div id="main">
         <div class="body-main">
-            <div class="title-select">
-                <div class="title-select-text">Chọn ghế</div>
-            </div>
-        </div>
-        <div class="full-screen">
-            <div class="screen">
-                <div class="title-screen">Màn hình</div>
-                <div class="list-seat">
-                    <table id="seat" Cellspacing="10">
-                    </table>
-                </div>
-                <div class="decs-seat">
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-normal"></i> Ghế chưa chọn
-                    </div>
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-selectd"></i> Ghế đã chọn
-                    </div>
-                    <div class="list-decs-seat">
-                        <i class="icon-decs icon-decs-seat-no-select"></i> Ghế không thể chọn (Đã có người mua)
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="require-seat">Bạn cần phải chọn ghế ngồi</div>
-        <div class="full-btn-pay">
-            <div class="full-btn">
-                <div class="btn-pay">
-                    <i class="icon-btn-return"></i>
-                    <button><a href="/html/buy-ticket.html">Quay lại</a></button>
-                </div>
-                <div class="btn-pay">
-                    <button id="btnPay">Thanh toán</button>
-                    <i class="icon-btn-pay"></i>
-                </div>
+            <div class="title">Thống Kê Doanh Thu Theo Tuần</div>
+            <div class="manage-total">
+                <table id="manageTotal">
+                    <tr>
+                        <th>STT</th>
+                        <th>Ngày</th>
+                        <th>Tổng Số Vé</th>
+                        <th>Tổng Số Tiền</th>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -110,6 +83,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="/js/select-seat.js"></script>
+<script src="/js/manage-total.js"></script>
 
 </html>

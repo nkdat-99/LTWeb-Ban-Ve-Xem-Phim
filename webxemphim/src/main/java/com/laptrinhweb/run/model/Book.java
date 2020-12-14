@@ -1,6 +1,7 @@
 package com.laptrinhweb.run.model;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,13 +24,14 @@ public class Book implements Serializable {
 	private int idseat;
 	private String pay_way;
 	private float total;
+	private Date date_pay;
 
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Book(int id, int idaccount, int idshowtimes, int idseat, String pay_way, float total) {
+	public Book(int id, int idaccount, int idshowtimes, int idseat, String pay_way, float total, Date date_pay) {
 		super();
 		this.id = id;
 		this.idaccount = idaccount;
@@ -37,15 +39,17 @@ public class Book implements Serializable {
 		this.idseat = idseat;
 		this.pay_way = pay_way;
 		this.total = total;
+		this.date_pay = date_pay;
 	}
 
-	public Book(int idaccount, int idshowtimes, int idseat, String pay_way, float total) {
+	public Book(int idaccount, int idshowtimes, int idseat, String pay_way, float total, Date date_pay) {
 		super();
 		this.idaccount = idaccount;
 		this.idshowtimes = idshowtimes;
 		this.idseat = idseat;
 		this.pay_way = pay_way;
 		this.total = total;
+		this.date_pay = date_pay;
 	}
 
 	public int getId() {
@@ -94,6 +98,14 @@ public class Book implements Serializable {
 
 	public void setTotal(float total) {
 		this.total = total;
+	}
+
+	public Date getDate_pay() {
+		return date_pay;
+	}
+
+	public void setDate_pay(Date date_pay) {
+		this.date_pay = date_pay;
 	}
 
 	public static long getSerialversionuid() {

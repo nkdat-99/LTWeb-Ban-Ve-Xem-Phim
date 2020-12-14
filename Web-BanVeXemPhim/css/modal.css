@@ -1,0 +1,85 @@
+.dialog-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: #808080;
+    opacity: 0.5;
+}
+
+.dialog {
+    display: none;
+    position: absolute;
+    width: 730px;
+    height: 380px;
+    border-radius: 3px;
+    background-color: #fff;
+    top: calc(50% - 255px);
+    left: calc(50% - 365px);
+    right: 0;
+    bottom: 0;
+    border: 4px solid #efebdb;
+}
+
+.dialog .dialog-title {
+    height: 50px;
+    background-color: #efebdb;
+    display: flex;
+    align-items: center;
+    padding: 0 0 3px 10px;
+}
+
+.title-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dialog .dialog-body {
+    padding: 20px;
+    background-color: #fff;
+    height: calc(100% - 60px);
+}
+
+.row {
+    height: 60px;
+    display: flex;
+}
+
+.row .title-row {
+    width: 150px;
+}
+
+.input-default {
+    height: 30px;
+    width: 300px;
+}
+
+.btn-dialog {
+    text-align: center;
+}
+
+.btn-dialog button {
+    width: 95px;
+    height: 35px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-left: 30px;
+}
+
+.btn-dialog button:first-child {
+    margin-left: -30px;
+}
+
+.btn-dialog button:hover {
+    background-color: #e2e2e2;
+}
+
+.btn-dialog button:focus {
+    outline: none;
+    border: 1px solid #979797;
+}

@@ -1,6 +1,7 @@
 package com.laptrinhweb.run.api;
 
 import java.util.ArrayList;
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -69,10 +70,10 @@ public class RestApiController {
 	@RequestMapping(value = "/login/", method = RequestMethod.POST)
 	public int Login(@Valid @RequestBody Account account) {
 		List<Account> listAccount = accountService.findAll();
+		String hashpass = String.valueOf(account.getPassword().hashCode());
 		for (Account a : listAccount) {
-			if (a.getUsername().compareTo(account.getUsername()) == 0
-					&& a.getPassword().compareTo(account.getPassword()) == 0) {
-				return 1;
+			if (a.getUsername().compareTo(account.getUsername()) == 0 && a.getPassword().compareTo(hashpass) == 0) {
+				return a.getId();
 			}
 		}
 		return 0;
@@ -88,6 +89,8 @@ public class RestApiController {
 				return 0;
 			}
 		}
+		String hashpassword = String.valueOf(account.getPassword().hashCode());
+		account.setPassword(hashpassword);
 		accountService.save(account);
 		return 1;
 	}
@@ -212,6 +215,16 @@ public class RestApiController {
 			return new ResponseEntity(HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<List<Seat>>(listSeat, HttpStatus.OK);
+	}
+
+	@CrossOrigin
+	@RequestMapping(value = "/seatid/{id}", method = RequestMethod.GET)
+	public Seat findSeat(@PathVariable("id") Integer id) {
+		Seat seat = seatService.getOne(id);
+		if (seat == null) {
+			ResponseEntity.notFound().build();
+		}
+		return seat;
 	}
 
 	@CrossOrigin
@@ -351,5 +364,53 @@ public class RestApiController {
 			showtimesService.delete(showtimes);
 			return 1;
 		}
+	}
+
+////////////////GetAll
+
+	@Autowired
+	FetService getService;
+
+	@CrossOrigin
+	@RequestMapping(value = "/getall/", method = RequestMethod.GET)
+	public ResponseEntity<List<Fet>> listGetAll() {
+		List<Fet> listGetall = new ArrayList<Fet>();
+		List<Book> listBook = bookService.findAll();
+		for (Book b : listBook) {
+			int id = b.getId();
+			Account a = accountService.getOne(b.getIdaccount());
+			String name = a.getName();
+			Showtimes s = showtimesService.getOne(b.getIdshowtimes());
+			Film f = filmService.getOne(s.getIdfilm());
+			String filmname = f.getName();
+			String time = s.getGiochieu();
+			Date date = s.getNgaychieu();
+			Room r = roomService.getOne(s.getIdroom());
+			String roomname = r.getName();
+			Seat se = seatService.getOne(b.getIdseat());
+			String seatname = se.getName();
+			Float total = b.getTotal();
+			Fet g = new Fet(id, name, filmname, time, date, roomname, seatname, total);
+			listGetall.add(g);
+		}
+		if (listGetall.isEmpty()) {
+			return new ResponseEntity(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<Fet>>(listGetall, HttpStatus.OK);
+	}
+	
+////////////////GetCountSeat
+	
+	@CrossOrigin
+	@RequestMapping(value = "/getcountseat/{idshowtimes}", method = RequestMethod.GET)
+	public int getCountSeat(@PathVariable("idshowtimes") Integer idshowtimes) {
+		List<Book> listBook = bookService.findAll();
+		int count = 0;
+		for(Book b : listBook) {
+			if(b.getIdshowtimes() == idshowtimes) {
+				count++;
+			}
+		}
+		return count;
 	}
 }
